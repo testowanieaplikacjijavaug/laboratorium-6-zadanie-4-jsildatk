@@ -1,29 +1,31 @@
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
-
 public class QuadraticFunctionAssertJTest {
     
     @Test
     public void shouldThrowExceptionWithAllZeros() {
-        assertThatThrownBy(() -> QuadraticFunction.of(0, 0, 0)).isInstanceOf(IllegalArgumentException.class);
+        QuadraticFunctionExceptionAssert.assertThat(() -> QuadraticFunction.of(0, 0, 0))
+                .throwsException(IllegalArgumentException.class);
     }
     
     @Test
     public void shouldThrowExceptionWithNoQuadraticFunction() {
-        assertThatThrownBy(() -> QuadraticFunction.of(0, 3, 5)).isInstanceOf(IllegalArgumentException.class);
+        QuadraticFunctionExceptionAssert.assertThat(() -> QuadraticFunction.of(0, 3, 5))
+                .throwsException(IllegalArgumentException.class);
     }
     
     @Test
     public void shouldThrowExceptionWithPositiveInfinities() {
-        assertThatThrownBy(() -> QuadraticFunction.of(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY)).isInstanceOf(
-                IllegalArgumentException.class);
+        QuadraticFunctionExceptionAssert.assertThat(
+                () -> QuadraticFunction.of(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY))
+                .throwsException(IllegalArgumentException.class);
     }
     
     @Test
     public void shouldThrowExceptionWithNegativeInfinities() {
-        assertThatThrownBy(() -> QuadraticFunction.of(Double.NEGATIVE_INFINITY, Double.NEGATIVE_INFINITY, Double.NEGATIVE_INFINITY)).isInstanceOf(
-                IllegalArgumentException.class);
+        QuadraticFunctionExceptionAssert.assertThat(
+                () -> QuadraticFunction.of(Double.NEGATIVE_INFINITY, Double.NEGATIVE_INFINITY, Double.NEGATIVE_INFINITY))
+                .throwsException(IllegalArgumentException.class);
     }
     
     @Test
@@ -69,12 +71,14 @@ public class QuadraticFunctionAssertJTest {
     
     @Test
     public void shouldThrowExceptionWhenGivenOnlyAAndC() {
-        assertThatThrownBy(() -> QuadraticFunction.of(1, 0, 3)).isInstanceOf(IllegalArgumentException.class);
+        QuadraticFunctionExceptionAssert.assertThat(() -> QuadraticFunction.of(1, 0, 3))
+                .throwsException(IllegalArgumentException.class);
     }
     
     @Test
     public void shouldThrowExceptionWithNegativeDelta() {
-        assertThatThrownBy(() -> QuadraticFunction.of(10, 6, 2)).isInstanceOf(IllegalArgumentException.class);
+        QuadraticFunctionExceptionAssert.assertThat(() -> QuadraticFunction.of(10, 6, 2))
+                .throwsException(IllegalArgumentException.class);
     }
     
 }

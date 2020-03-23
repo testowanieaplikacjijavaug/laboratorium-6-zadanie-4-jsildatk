@@ -1,32 +1,30 @@
 import org.junit.jupiter.api.Test;
 
-import java.util.concurrent.Callable;
-
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.CoreMatchers.*;
 
 public class QuadraticFunctionHamcrestTest {
     
     @Test
-    public void shouldThrowExceptionWithAllZeros() throws Exception {
-        assertThat(exceptionOf(() -> QuadraticFunction.of(0, 0, 0)), instanceOf(IllegalArgumentException.class));
+    public void shouldThrowExceptionWithAllZeros() {
+        assertThat(() -> QuadraticFunction.of(0, 0, 0), QuadraticFunctionExceptionMatcher.throwsException(IllegalArgumentException.class));
     }
     
     @Test
-    public void shouldThrowExceptionWithNoQuadraticFunction() throws Exception {
-        assertThat(exceptionOf(() -> QuadraticFunction.of(0, 3, 5)), instanceOf(IllegalArgumentException.class));
+    public void shouldThrowExceptionWithNoQuadraticFunction() {
+        assertThat(() -> QuadraticFunction.of(0, 3, 5), QuadraticFunctionExceptionMatcher.throwsException(IllegalArgumentException.class));
     }
     
     @Test
-    public void shouldThrowExceptionWithPositiveInfinities() throws Exception {
-        assertThat(exceptionOf(() -> QuadraticFunction.of(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY)),
-                instanceOf(IllegalArgumentException.class));
+    public void shouldThrowExceptionWithPositiveInfinities() {
+        assertThat(() -> QuadraticFunction.of(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY),
+                QuadraticFunctionExceptionMatcher.throwsException(IllegalArgumentException.class));
     }
     
     @Test
-    public void shouldThrowExceptionWithNegativeInfinities() throws Exception {
-        assertThat(exceptionOf(() -> QuadraticFunction.of(Double.NEGATIVE_INFINITY, Double.NEGATIVE_INFINITY, Double.NEGATIVE_INFINITY)),
-                instanceOf(IllegalArgumentException.class));
+    public void shouldThrowExceptionWithNegativeInfinities() {
+        assertThat(() -> QuadraticFunction.of(Double.NEGATIVE_INFINITY, Double.NEGATIVE_INFINITY, Double.NEGATIVE_INFINITY),
+                QuadraticFunctionExceptionMatcher.throwsException(IllegalArgumentException.class));
     }
     
     @Test
@@ -59,23 +57,14 @@ public class QuadraticFunctionHamcrestTest {
     
     @Test
     public void shouldThrowExceptionWhenGivenOnlyAAndC() throws Exception {
-        assertThat(exceptionOf(() -> QuadraticFunction.of(1, 0, 3)),
-                instanceOf(IllegalArgumentException.class));
+        assertThat(() -> QuadraticFunction.of(1, 0, 3),
+                QuadraticFunctionExceptionMatcher.throwsException(IllegalArgumentException.class));
     }
     
     @Test
     public void shouldThrowExceptionWithNegativeDelta() throws Exception {
-        assertThat(exceptionOf(() -> QuadraticFunction.of(10, 6, 2)),
-                instanceOf(IllegalArgumentException.class));
-    }
-    
-    private static Throwable exceptionOf(Callable<?> callable) throws Exception {
-        try {
-            callable.call();
-            return null;
-        } catch ( Throwable t ) {
-            return t;
-        }
+        assertThat(() -> QuadraticFunction.of(10, 6, 2),
+                QuadraticFunctionExceptionMatcher.throwsException(IllegalArgumentException.class));
     }
     
 }

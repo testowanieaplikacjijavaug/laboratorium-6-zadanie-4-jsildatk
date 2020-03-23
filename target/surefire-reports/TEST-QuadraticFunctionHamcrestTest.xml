@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PL"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-13.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\Kubol\AppData\Local\Temp\surefire7189848276214095743\surefirebooter9498112695753378449.jar C:\Users\Kubol\AppData\Local\Temp\surefire7189848276214095743 2020-03-23T16-56-50_446-jvmRun1 surefire14871963933798207682tmp surefire_06884501921213366471tmp"/>
+    <property name="sun.java.command" value="C:\Users\Kubol\AppData\Local\Temp\surefire5423193775409641626\surefirebooter1830891224348029724.jar C:\Users\Kubol\AppData\Local\Temp\surefire5423193775409641626 2020-03-23T17-22-46_503-jvmRun1 surefire11995922116176251622tmp surefire_0709820720886351158tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Kubol\Desktop\workspace\laboratorium-6-zadanie-4-jsildatk\target\test-classes;C:\Users\Kubol\Desktop\workspace\laboratorium-6-zadanie-4-jsildatk\target\classes;C:\Users\Kubol\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Kubol\.m2\repository\org\junit\jupiter\junit-jupiter\5.6.0\junit-jupiter-5.6.0.jar;C:\Users\Kubol\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\Kubol\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Kubol\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Kubol\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\Kubol\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar;C:\Users\Kubol\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\Kubol\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;C:\Users\Kubol\.m2\repository\org\assertj\assertj-core\3.15.0\assertj-core-3.15.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Kubol\AppData\Local\Temp\surefire7189848276214095743\surefirebooter9498112695753378449.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Kubol\AppData\Local\Temp\surefire5423193775409641626\surefirebooter1830891224348029724.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="13.0.2+8"/>
